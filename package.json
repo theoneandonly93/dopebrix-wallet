@@ -1,0 +1,17 @@
+{
+  "name": "dopebrix-wallet",
+  "version": "1.0.0",
+  "description": "DopeBrix Wallet ===============",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}

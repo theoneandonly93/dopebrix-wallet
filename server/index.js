@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Lightweight proxy to Fairbrix RPC and external APIs, CORS enabled.
-// No dependencies.
+// Load environment variables from .env file
+
+require('dotenv').config();
 
 const http = require('http');
 const https = require('https');
