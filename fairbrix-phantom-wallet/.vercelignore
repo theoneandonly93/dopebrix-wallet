@@ -1,0 +1,34 @@
+# Exclude large files and folders from Vercel deployment
+node_modules/
+*.exe
+*.bat
+*.sh
+*.json
+*.md
+*.txt
+*.conf
+*.ini
+*.log
+*.db
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.dylib
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.bak
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+*.env
+*.env.*
+
+# Exclude Electron binaries
+node_modules/electron/

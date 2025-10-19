@@ -1,0 +1,24 @@
+{
+  "airdrops": [
+    {
+      "address": "fa4jtPc7pTwsLBxZve97WWB4e2o5z8Gtup",
+      "amount": 800000000
+    },
+    {
+      "address": "fLbzKBSragPgMVct9iA61feDnzwohWXqqb",
+      "amount": 3500000000
+    },
+    {
+      "address": "fVVa4wwzhcuZE7r5BxagQRUvcVk1zpbVse",
+      "amount": 1400000000
+    },
+    {
+      "address": "fTq83TNtoPPTpbKLWV8QjqLrZQWmPPG3Yx",
+      "amount": 700000000
+    },
+    {
+      "address": "fRVS5j1GUapdwYa75Kitq6ptinC2xriQQz",
+      "amount": 600000000
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "DOPE Wallet",
+  "short_name": "DOPE Wallet",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B071A",
+  "theme_color": "#6C4FFB",
+  "description": "DOPE Wallet — a PWA wallet for the Fairbrix network.",
+  "icons": [
+    {
+      "src": "/icons/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

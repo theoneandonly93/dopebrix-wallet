@@ -1,0 +1,25 @@
+{
+  "total_minted": 7000000000,
+  "miners": {
+    "fa4jtPc7pTwsLBxZve97WWB4e2o5z8Gtup": {
+      "total": 800000000,
+      "last_commit": "7ec91f262d0e67ae83472e03ee0c8877"
+    },
+    "fLbzKBSragPgMVct9iA61feDnzwohWXqqb": {
+      "total": 3500000000,
+      "last_commit": "92629d93605937673a5f8f1866b139f8"
+    },
+    "fVVa4wwzhcuZE7r5BxagQRUvcVk1zpbVse": {
+      "total": 1400000000,
+      "last_commit": "d4b2b0c83a5d5370f47c86b3ce5d4f3a"
+    },
+    "fTq83TNtoPPTpbKLWV8QjqLrZQWmPPG3Yx": {
+      "total": 700000000,
+      "last_commit": "dd0e175fd0786cec5e2c3b36c6573051"
+    },
+    "fRVS5j1GUapdwYa75Kitq6ptinC2xriQQz": {
+      "total": 600000000,
+      "last_commit": "d75cbe7667b3659241ec0d9cde40cf9e"
+    }
+  }
+}

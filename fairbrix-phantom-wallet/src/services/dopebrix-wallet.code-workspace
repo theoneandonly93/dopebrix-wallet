@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "Fairbrix-pack",
+			"path": "../../../../../fairbrix-win-client-v1.0/Fairbrix-pack"
+		},
+		{
+			"name": "fairbrix-phantom-wallet",
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../Dopebrix-Network-feat-fairbrix-port/fairbrix-feat-fairbrix-port"
+		}
+	],
+	"settings": {}
+}

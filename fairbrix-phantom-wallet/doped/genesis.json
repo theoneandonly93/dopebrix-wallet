@@ -1,0 +1,27 @@
+{
+  "chain_id": "DOPE-FBX-L2",
+  "genesis_time": "2025-10-16T00:00:00Z",
+  "block_time_seconds": 5,
+  "initial_height": 1,
+  "token": {
+    "symbol": "DOPE",
+    "decimals": 8,
+  "total_supply": "7000000000",
+    "premine": {
+      "allocations": [
+        { "address": "fa4jtPc7pTwsLBxZve97WWB4e2o5z8Gtup", "amount": "800000000", "label": "Treasury" },
+        { "address": "fLbzKBSragPgMVct9iA61feDnzwohWXqqb", "amount": "3500000000", "label": "Liquidity" },
+        { "address": "fVVa4wwzhcuZE7r5BxagQRUvcVk1zpbVse", "amount": "1400000000", "label": "Dev Fund" },
+        { "address": "fTq83TNtoPPTpbKLWV8QjqLrZQWmPPG3Yx", "amount": "700000000", "label": "Community" },
+        { "address": "fRVS5j1GUapdwYa75Kitq6ptinC2xriQQz", "amount": "600000000", "label": "Marketing" }
+      ]
+    }
+  },
+  "params": {
+    "reward_per_block": "10",
+    "commit_interval": 10,
+    "commit_fee_fbx": "0.0001",
+    "anchor_tag_hex": "444F5045"
+  }
+}
+

@@ -1,0 +1,22 @@
+rpc.dopebrix.com {
+  encode zstd gzip
+  basicauth * {
+    1 $2a$14$tPGy0U1YGB69gVDGYdzmg.vfFQGru0DM28qEIt4PuG.oSofKL3yQ6
+  }
+  reverse_proxy 127.0.0.1:8645 {
+    flush_interval -1
+    transport http {
+      read_timeout 120s
+      write_timeout 120s
+      dial_timeout 5s
+    }
+  }
+  header {
+    Access-Control-Allow-Origin *
+    Access-Control-Allow-Methods "POST, OPTIONS"
+    Access-Control-Allow-Headers "Content-Type, Authorization"
+  }
+  @options method OPTIONS
+  handle @options { respond 204 }
+  log
+}
