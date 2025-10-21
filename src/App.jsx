@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { useAuthStore } from './services/auth.js';
 import Login from './pages/Login.jsx';
+import Wallet from './pages/Wallet.jsx';
+import Settings from './pages/Settings.jsx';
+import ManageNodes from './pages/ManageNodes.jsx';
+import TokenDetailTab from './pages/TokenDetail.jsx';
 // import MaintenanceFallback from './components/MaintenanceFallback.jsx';
 export class SafeBoundary extends React.Component {
   state = { hasError: false };
@@ -52,7 +56,14 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Pass tabArgs to dynamic tab, with fallback to wallet
+  // Register all tab components
+  const TABS = {
+    wallet: Wallet,
+    settings: Settings,
+    nodes: ManageNodes,
+    token: TokenDetailTab,
+    // add other tabs as needed
+  };
   let Active;
   try {
     if (tab === 'token') {
