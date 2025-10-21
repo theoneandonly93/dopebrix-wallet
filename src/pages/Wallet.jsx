@@ -30,6 +30,7 @@ import { fairbrix } from '../services/fairbrix.js';
 import { useAuthStore } from '../services/auth.js';
 import { fmtAmt, fmtUSD } from '../utils/format.js';
 import { copyText } from '../utils/clipboard.js';
+import { AddressBook } from '../services/addressbook.js';
 
 // Simple token icon helper with cache-busting and base path support
 const ICON_VER = (import.meta && import.meta.env && import.meta.env.VITE_ICON_VER) || '1';
@@ -703,7 +704,18 @@ export default function Wallet() {
                 <div className="list-item">
                   <div>
                     <label className="label">Recipient address</label>
-                    <input className="input" placeholder="f..." value={to} onChange={e=>{ setTo(e.target.value); setAddrCheck(''); }} />
+                    <input className="input" placeholder="f..." value={to} onChange={e=>{ setTo(e.target.value); setAddrCheck(''); }} autoComplete="off" />
+                    {/* AddressBook recents suggestions */}
+                    {(!to || to.length < 6) && AddressBook.getRecents().length > 0 && (
+                      <div className="muted" style={{fontSize:12, marginTop:6}}>
+                        Recent:
+                        <div style={{display:'flex',flexWrap:'wrap',gap:6,marginTop:4}}>
+                          {AddressBook.getRecents().map(addr => (
+                            <span key={addr} className="pill" style={{cursor:'pointer'}} onClick={()=>{ setTo(addr); setAddrCheck(''); }}>{addr.slice(0,8)}...{addr.slice(-6)}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     {!!to && (
                       <div className="muted" style={{fontSize:12, marginTop:6}}>
                         {addrCheck === 'valid' && 'Address looks valid on this node'}
@@ -744,6 +756,8 @@ export default function Wallet() {
                       } else {
                         setEst({ ok: false, fee: 0, total: Number(amount)||0 });
                       }
+                      // Save to address book recents
+                      AddressBook.addRecent(to);
                     } catch {
                       setConfirmSheet(true);
                     }

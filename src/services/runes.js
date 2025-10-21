@@ -137,7 +137,8 @@ async function scanRecentRunes({ lookback = 50 } = {}) {
 }
 
 async function getBalancesForAddress(address, { lookback = 200 } = {}) {
-  const evs = await scanRecentRunes({ lookback });
+  // Increase lookback to 2000 blocks for deeper scan
+  const evs = await scanRecentRunes({ lookback: 2000 });
   const balances = new Map(); // key: ticker, value: amount
   for (const ev of evs) {
     const sym = (ev.ticker || '').toUpperCase();
@@ -150,6 +151,11 @@ async function getBalancesForAddress(address, { lookback = 200 } = {}) {
       if (ev.to === address) balances.set(sym, cur + (Number(ev.amount) || 0));
       if (ev.from === address) balances.set(sym, cur - (Number(ev.amount) || 0));
     }
+  }
+  // Debug: log all events and balances for this address
+  if (typeof window !== 'undefined') {
+    console.log('[Runes] Events for', address, evs);
+    console.log('[Runes] Balances for', address, Array.from(balances.entries()));
   }
   const out = [];
   for (const [symbol, amount] of balances.entries()) {
