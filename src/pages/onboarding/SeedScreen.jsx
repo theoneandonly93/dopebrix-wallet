@@ -77,8 +77,19 @@ export default function SeedScreen({ onFinish }) {
     } finally { setBusy(false); }
   };
 
+  const clearWalletStorage = () => {
+    // Remove all wallet-related localStorage keys
+    const keys = [
+      'fbrx_wallet_label', 'fbrx_pass_hash', 'fbrx_bio_enabled', 'fbrx_seed_phrase', 'fbrx_seed_backed',
+      'fbx_addr', 'fbx_balance', 'fbx_tokens', 'fbx_price_usd', 'fbx_wif_enc', 'fbx_wif_salt', 'fbx_wif_iv',
+      'dope_addr', 'seed', 'fbrx_last_addr', 'fbrx_tokens_cache', 'fbrx_activity_cache', 'fbrx_wallet_cache'
+    ];
+    for (const k of keys) try { localStorage.removeItem(k); } catch {}
+  };
+
   const handleContinue = async () => {
     if (!wallet) return;
+    clearWalletStorage();
     await saveUnifiedWallet(wallet);
     setSeedBacked(true);
     onFinish && onFinish();

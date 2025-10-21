@@ -909,7 +909,7 @@ export default function Wallet() {
             <div className="alert" style={{background:'#2b2213', color:'#ffd7a6'}}>âš  Wallet not backed up</div>
             <div className="spacer"/>
             <div className="list">
-              <div className="list-item" onClick={async()=>{ const a = await resolveAddress(); setAddress(a); setReceiveSheet('address'); }}>
+              <div className="list-item" onClick={async()=>{ if(window.__setAppTab) window.__setAppTab('wallet'); const a = await resolveAddress(); setAddress(a); setReceiveSheet('address'); }}>
                 <div>
                   <div style={{fontWeight:700}}>Coins and tokens</div>
                   <div className="muted" style={{fontSize:12}}>Receive Fairbrix and Runes tokens.</div>
