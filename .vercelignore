@@ -1,0 +1,14 @@
+# Ignore large backend and binary files for Vercel deployment
+fbrix-node/
+dopeed/
+DopeBrix/
+Fairbrix-pack/
+fbrix-node/fairbrixd
+fbrix-node/*.exe
+fbrix-node/*.bin
+fbrix-node/data/
+fbrix-node/debug.log
+*.sh
+Dockerfile
+fly.toml
+Caddyfile

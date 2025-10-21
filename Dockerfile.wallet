@@ -1,0 +1,8 @@
+FROM node:20-alpine
+WORKDIR /
+COPY ./server.cjs ./server.cjs
+COPY ./package.json ./package.json
+COPY ./package-lock.json ./package-lock.json
+RUN npm install --omit=dev
+EXPOSE 9500 9501
+CMD ["node", "server.cjs"]

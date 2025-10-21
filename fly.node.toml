@@ -1,0 +1,16 @@
+app = "fairbrix-node"
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+# Add any environment variables needed for your node here
+
+[[services]]
+  internal_port = 9332
+  protocol = "tcp"
+  [[services.ports]]
+    port = 9332
+    handlers = ["http"]
+
+# Add additional service configs as needed

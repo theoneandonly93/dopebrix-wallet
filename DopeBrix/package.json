@@ -1,0 +1,9 @@
+{
+  "name": "dopebrix",
+  "version": "1.0.0",
+  "description": "DopeBrix node scripts",
+  "main": "start-all.sh",
+  "scripts": {},
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+# Dopelganga Rewards Server Dockerfile
+FROM node:20-alpine
+WORKDIR /doped
+COPY ./doped .
+RUN npm install
+EXPOSE 9500
+CMD ["node", "reward_server.js"]

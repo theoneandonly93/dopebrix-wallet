@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+.env
+
+
+.vercel
+fbrix-node/data
+fbrix-node/debug.log
+
+# Exclude Fairbrix node binary and configs from git and Vercel
+fbrix-node/fairbrixd
+fbrix-node/fbx.conf
+fbrix-node/*.exe
+fbrix-node/*.bin
