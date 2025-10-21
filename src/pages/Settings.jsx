@@ -29,6 +29,7 @@ export default function Settings() {
           <Row icon={'@'} title="Address book" onClick={()=>window.__setAppTab && window.__setAppTab('addressbook')} />
           <Row icon={'🛠️'} title="Advanced" />
           <Row icon={'🌐'} title="Networks" right="Mainnet ›" onClick={()=>window.__setAppTab && window.__setAppTab('networks')} />
+          <Row icon={'🧩'} title="Manage Nodes" onClick={()=>window.__setAppTab && window.__setAppTab('nodes')} />
           <Row icon={'≡'} title="About" onClick={()=>window.__setAppTab && window.__setAppTab('about')} />
           <Row icon={'❓'} title="Support center" right="↗" onClick={()=>window.__setAppTab && window.__setAppTab('support')} />
         </div>
